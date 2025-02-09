@@ -1,4 +1,49 @@
-/* Apply Minecraftia font to the entire page */
+/* Navbar Styling */
+.navbar {
+    background-color: #2f2f2f; /* Dark background for navbar */
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    position: fixed;  /* Keep navbar fixed at the top */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
 body {
     font-family: 'Minecraftia', sans-serif;
     background-image: url('images/dirt_background.png'); /* Background image */

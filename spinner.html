@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability Spinner</title>
+    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add custom styling for the spinner */
+        .spinner-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        #spinner {
+            border: 10px solid #f3f3f3;
+            border-top: 10px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        select {
+            margin: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="spinner.html">Probability Spinner</a></li>
+        </ul>
+    </div>
+
+    <div class="spinner-container">
+        <h2>Choose a category to spin</h2>
+        <select id="categorySelect">
+            <option value="advancements">Minecraft Advancements</option>
+            <option value="items">Minecraft Items</option>
+        </select>
+
+        <button onclick="spin()">Spin!</button>
+
+        <div id="spinner"></div>
+
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+        // Minecraft advancements list
+        const advancements = [
+            "Mine Diamonds", "Build a House", "Tame a Wolf", "Find a Village", "Defeat a Pillager",
+            "Craft an Enchanting Table", "Kill a Blaze", "Craft a Full Set of Iron Armor", "Go to the Nether",
+            "Defeat the Ender Dragon", "Catch a Fish", "Breed Animals", "Explore a Stronghold", "Get a Skeleton's Bow",
+            "Find a Dungeon", "Create a Potion", "Survive a Night", "Create a Farm", "Make a Beacon",
+            "Find a Mushroom Biome", "Build a Portal to the End", "Defeat a Witch", "Create a Redstone Circuit",
+            "Find a Desert Temple", "Make a Cake", "Find a Ravine"
+        ];
+
+        // Minecraft items list
+        const items = [
+            "Diamond Sword", "Diamond Pickaxe", "Iron Ingot", "Gold Ingot", "Ender Pearl", "Potion of Strength",
+            "Golden Apple", "Enchanted Book", "Bow", "Arrow", "Stone Shovel", "Wooden Axe", "Iron Helmet",
+            "Crafting Table", "Furnace", "Bed", "Chest", "Obsidian", "Ender Chest", "Totem of Undying",
+            "Shulker Box", "Compass", "Map", "Tnt", "Slimeball", "Fire Charge", "Lantern"
+        ];
+
+        // Spinner logic
+        function spin() {
+            const category = document.getElementById("categorySelect").value;
+            let itemsToSpin;
+
+            if (category === "advancements") {
+                itemsToSpin = advancements;
+            } else {
+                itemsToSpin = items;
+            }
+
+            const randomItem = itemsToSpin[Math.floor(Math.random() * itemsToSpin.length)];
+
+            // Display the result
+            document.getElementById("result").textContent = `You spun: ${randomItem}`;
+        }
+    </script>
+</body>
+</html>
