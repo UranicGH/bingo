@@ -65,7 +65,7 @@ body {
     flex-direction: column;
     align-items: center; /* Center the content horizontally */
     justify-content: center; /* Align content to the top */
-    padding-top: 0px; /* Adjust this to control how far down the heading image goes */
+    padding-top: 100px; /* Adjust this to control how far down the heading image goes */
     width: 100%;  /* Make sure the container takes up full width */
     max-width: 800px;  /* Optional: Set a max width for larger screens */
 }
@@ -175,6 +175,16 @@ button.generate-button img {
         width: 70px;
         font-size: 10px;  /* Smaller font for smaller screens */
         padding: 5px;  /* Less padding inside the cells */
+    }
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
     }
 
     .footer {
