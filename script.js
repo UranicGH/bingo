@@ -88,7 +88,19 @@ function shuffleArray(array) {
 }
 
 // Event listener for button click to generate a new bingo board
-document.getElementById("generateBoard").addEventListener("click", generateBingoBoard);
+document.getElementById("generateBoard").addEventListener("click", function() {
+    // Change the button image to a loading or alternate image
+    const buttonImage = document.getElementById("generateButtonImage");
+    buttonImage.src = "images/generate_board_clicked.png";  // Change to your desired loading image
+    
+    // Call the function to generate the bingo board
+    generateBingoBoard();
+    
+    // After the board is generated, change the image back to the original
+    setTimeout(function() {
+        buttonImage.src = "images/generate_board.png"; // Change back to the original image
+    }, 100); // Adjust the timeout based on how long you want the "loading" image to show (e.g., 1 second)
+});
 
 // Initialize the board on page load
 window.onload = generateBingoBoard;
