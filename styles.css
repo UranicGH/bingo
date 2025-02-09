@@ -158,7 +158,7 @@ button.generate-button img {
     }
 
     .created-by {
-        margin-top: -100px;  /* Adjust the margin for the "created by" image */
+        margin-top: -110px;  /* Adjust the margin for the "created by" image */
         max-width: 350px;  /* Adjust the size of the "created by" image */
     }
 
