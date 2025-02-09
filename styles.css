@@ -1,7 +1,7 @@
 /* Navbar Styling */
 .navbar {
     background-color: rgba(0, 0, 0, 0.7); /* rgba with 70% opacity */
-    padding: 10px;
+    padding: 10px 0;
     width: 100%;
     text-align: center;
     position: fixed;
@@ -153,13 +153,13 @@ button.generate-button img {
     }
 
     .header-image {
-        margin-bottom: -20px;  /* Adjust the space below the header image */
+        margin-top: 50px;  /* Move the header down so it's not covered by the navbar */
         max-width: 500px;  /* Slightly reduce the size of the header image */
     }
 
     .created-by {
-        margin-top: 0px;  /* Adjust the margin for the "created by" image */
-        max-width: 375px;  /* Adjust the size of the "created by" image */
+        margin-top: -110px;  /* Adjust the margin for the "created by" image */
+        max-width: 350px;  /* Adjust the size of the "created by" image */
     }
 
     /* If needed, adjust the button spacing too */
@@ -184,13 +184,18 @@ button.generate-button img {
         padding: 5px;  /* Less padding inside the cells */
     }
     
+    .navbar {
+        padding: 5px 0;  /* Reduce the padding to make the navbar thinner */
+        font-size: 14px;  /* Optionally reduce font size for better fit */
+    }
+
+    /* Optionally adjust the navbar links */
     .navbar ul {
-        flex-direction: column; /* Stack the links vertically on smaller screens */
-        padding: 10px;
+        padding: 0;  /* Remove any extra padding on the navbar links */
     }
 
     .navbar li {
-        margin: 10px 0;
+        margin: 0 10px;  /* Adjust the margin between navbar items */
     }
 
     .footer {
