@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     align-items: center; /* Center the content horizontally */
     justify-content: center; /* Align content to the top */
-    padding-top: 50px; /* Adjust this to control how far down the heading image goes */
+    padding-top: 0px; /* Adjust this to control how far down the heading image goes */
     width: 100%;  /* Make sure the container takes up full width */
     max-width: 800px;  /* Optional: Set a max width for larger screens */
 }
