@@ -153,12 +153,12 @@ button.generate-button img {
     }
 
     .header-image {
-        margin-top: 50px;  /* Move the header down so it's not covered by the navbar */
+        margin-top: 30px;  /* Move the header down so it's not covered by the navbar */
         max-width: 500px;  /* Slightly reduce the size of the header image */
     }
 
     .created-by {
-        margin-top: -110px;  /* Adjust the margin for the "created by" image */
+        margin-top: -80px;  /* Adjust the margin for the "created by" image */
         max-width: 350px;  /* Adjust the size of the "created by" image */
     }
 
