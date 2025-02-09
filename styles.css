@@ -1,0 +1,89 @@
+/* Apply Minecraftia font to the entire page */
+body {
+    font-family: 'Minecraftia', sans-serif;
+    background-image: url('images/dirt_background.png'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: flex-start; /* Align content to the top */
+    padding-top: 50px; /* Adjust this to control how far down the heading image goes */
+}
+
+.header-image {
+    width: 600px; /* Adjust the size of the header image */
+    margin-bottom: -110px;
+}
+
+.created-by {
+    width: 425px; /* Adjust the size of the header image */
+    margin-bottom: 0px;
+}
+
+button.generate-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+button.generate-button img {
+    width: 300px; /* Size for the button image */
+}
+
+.bingo-board {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.bingo-cell {
+    display: flex;
+    align-items: center;  /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    background-color: #e2e2e2; /* Light background color */
+    border: 3px solid black; /* Thicker black border */
+    font-size: 12px;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    overflow: hidden; /* Prevent content from overflowing */
+    background-image: url('images/gray_wool.png');
+    background-size: cover; /* Make sure the image covers the cell */
+    background-position: center; /* Position the image in the center */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+/* For crossed-off cells, change the background image */
+.bingo-cell.crossed-off {
+    background-image: url('images/lime_wool.png'); /* Crossed-off background image */
+}
+
+/* Use the background image for normal cells */
+.bingo-cell:not(.crossed-off) {
+    background-image: url('images/gray_wool.png');
+}
+
+.bingo-cell:hover {
+    background-color: #d1e7dd; /* Hover effect */
+}
+
