@@ -6,7 +6,7 @@ body {
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: flex-start;  /* Align content to the top */
+    align-items: center;  /* Align content to the top */
     height: 100vh;
     flex-direction: column;
     color: white;
