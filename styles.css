@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the content horizontally */
-    justify-content: flex-start; /* Align content to the top */
+    justify-content: center; /* Align content to the top */
     padding-top: 50px; /* Adjust this to control how far down the heading image goes */
     width: 100%;  /* Make sure the container takes up full width */
     max-width: 800px;  /* Optional: Set a max width for larger screens */
@@ -28,12 +28,14 @@ body {
 .header-image {
     width: 100%;
     max-width: 600px;  /* Ensure header image doesn't get too large */
-    margin-bottom: -110px;
+    margin-bottom: 0px;
 }
 
 .created-by {
     width: 100%;
     max-width: 425px;
+    margin-top: -110px; /* Reduce this margin if needed to make the heading sit higher */
+
 }
 
 button.generate-button {
