@@ -53,6 +53,12 @@ button.generate-button img {
     justify-content: center;
 }
 
+.bingo-cell span {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5); /* Add shadow to text */
+    /* font-size: 10vw;
+    max-font-size: 24px; */
+}
+
 .bingo-cell {
     display: flex;
     align-items: center;  /* Vertical centering */
@@ -71,6 +77,8 @@ button.generate-button img {
     background-size: cover; /* Make sure the image covers the cell */
     background-position: center; /* Position the image in the center */
     background-repeat: no-repeat; /* Prevent repeating the image */
+    padding: 10px; /* Add padding inside the cell to prevent text from touching edges */
+    box-sizing: border-box; /* Make sure padding doesn't affect the cell size */
 }
 
 /* For crossed-off cells, change the background image */
